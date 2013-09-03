@@ -17,7 +17,7 @@ var debug = function(x) {
 var getImdbScore = function(ref, data) {
   var rating = $(data).find(".rating").html();
   if (rating !== undefined) 
-    ref.text(ref.text() + " [" + rating + "]");
+    ref.find('a:first').text(ref.text() + " [" + rating + "]");
 };
 
 var getTorrentPage = function(ref, url) {
